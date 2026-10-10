@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-analyzer"
+version = "1.0.0"
+description = "Gemini-powered video analysis for ad creatives — CLI + MCP server"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=2.0.0,<3.0.0",
+    "mcp>=1.0.0",
+    "python-docx>=1.1.0",
+    "markdown>=3.5",
+    "xhtml2pdf>=0.2.11",
+    "customtkinter>=5.2.0",
+    "tkinterdnd2>=0.4.0",
+]
+
+[project.optional-dependencies]
+web = ["flask>=3.0", "gunicorn>=22.0"]
+
+[project.scripts]
+video-analyzer = "video_analyzer.cli:main"
+video-analyzer-mcp = "video_analyzer.mcp_server:main"
+video-analyzer-web = "video_analyzer.webapp:main"
+
+[project.gui-scripts]
+video-analyzer-gui = "video_analyzer.gui:main"
+
+[tool.setuptools.packages.find]
+include = ["video_analyzer*"]
+
+[tool.setuptools.package-data]
+video_analyzer = ["static/*"]
