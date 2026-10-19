@@ -8,6 +8,8 @@ returns a structured ad-creative analysis as markdown: scene-by-scene breakdown,
 full transcript, creative-structure teardown, performance signals, and an
 iteration brief.
 
+> **New to this?** Download [SETUP-WITH-AI.md](SETUP-WITH-AI.md), attach it to any AI chat (Claude, ChatGPT, Gemini), and press Enter. The AI walks you through setup one step at a time.
+
 ## Install
 
 ```bash
